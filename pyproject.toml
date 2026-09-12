@@ -33,3 +33,6 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.ruff.lint]
+ignore = ["RUF007"]  # zip() over successive pairs reads fine here; not worth the churn

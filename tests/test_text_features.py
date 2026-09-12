@@ -1,4 +1,9 @@
-from alzspeech.features.text_features import PAUSE_TOKEN, Word, disfluency_features, insert_pause_tokens
+from alzspeech.features.text_features import (
+    PAUSE_TOKEN,
+    Word,
+    disfluency_features,
+    insert_pause_tokens,
+)
 
 
 def test_insert_pause_tokens_inserts_at_large_gaps():

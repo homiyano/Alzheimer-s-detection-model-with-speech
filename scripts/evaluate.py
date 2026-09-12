@@ -29,7 +29,6 @@ from torch.utils.data import DataLoader
 
 from alzspeech.data.manifest import load_manifest
 from alzspeech.features.pmi_graph import PMILookup, build_graph
-from alzspeech.metrics import bootstrap_ci, classification_metrics
 from alzspeech.models.gated_fusion import GatedFusionClassifier
 from alzspeech.models.pmi_graph import PMIGraphClassifier
 from alzspeech.models.text_baseline import TextDisfluencyClassifier

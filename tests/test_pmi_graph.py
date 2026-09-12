@@ -34,7 +34,7 @@ def test_build_graph_empty_transcript_has_no_nodes():
 
 def test_build_graph_falls_back_to_self_loops_when_no_edge_passes_threshold():
     lookup = PMILookup(window=3).fit(["completely different reference corpus"])
-    node_words, edge_index, edge_weight = build_graph("brand new unseen words here", lookup, threshold=100.0)
+    node_words, edge_index, _edge_weight = build_graph("brand new unseen words here", lookup, threshold=100.0)
     assert len(node_words) > 0
     assert edge_index.shape[1] == len(node_words)  # one self-loop per node
     assert np.all(edge_index[0] == edge_index[1])

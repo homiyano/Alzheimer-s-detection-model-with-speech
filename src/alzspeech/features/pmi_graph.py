@@ -33,7 +33,7 @@ class PMILookup:
         self.word_counts: Counter = Counter()
         self.n_windows = 0
 
-    def fit(self, reference_transcripts: Iterable[str]) -> "PMILookup":
+    def fit(self, reference_transcripts: Iterable[str]) -> PMILookup:
         for text in reference_transcripts:
             tokens = _tokenize(text)
             for i, w in enumerate(tokens):

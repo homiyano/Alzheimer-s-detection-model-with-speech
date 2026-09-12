@@ -19,17 +19,9 @@ import numpy as np
 import pandas as pd
 import soundfile as sf
 
-_CN_WORDS = (
-    "the boy is reaching for a cookie jar while his sister watches "
-    "the mother is drying dishes and water is overflowing from the sink "
-    "outside the window two children can be seen near a curb"
-).split()
+_CN_WORDS = ["the", "boy", "is", "reaching", "for", "a", "cookie", "jar", "while", "his", "sister", "watches", "the", "mother", "is", "drying", "dishes", "and", "water", "is", "overflowing", "from", "the", "sink", "outside", "the", "window", "two", "children", "can", "be", "seen", "near", "a", "curb"]
 
-_AD_WORDS = (
-    "the boy um is um reaching for uh the thing the jar and uh "
-    "the woman is uh washing and the the water is uh you know spilling "
-    "and um there's a a thing outside I don't know"
-).split()
+_AD_WORDS = ["the", "boy", "um", "is", "um", "reaching", "for", "uh", "the", "thing", "the", "jar", "and", "uh", "the", "woman", "is", "uh", "washing", "and", "the", "the", "water", "is", "uh", "you", "know", "spilling", "and", "um", "there's", "a", "a", "thing", "outside", "I", "don't", "know"]
 
 _FILLERS = {"um", "uh", "you know", "I don't know"}
 

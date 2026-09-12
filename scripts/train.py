@@ -42,7 +42,12 @@ from alzspeech.training.datasets import (
     collate_silence,
     collate_text,
 )
-from alzspeech.training.forward_fns import fusion_forward, graph_forward, silence_forward, text_forward
+from alzspeech.training.forward_fns import (
+    fusion_forward,
+    graph_forward,
+    silence_forward,
+    text_forward,
+)
 from alzspeech.training.loop import train_and_evaluate
 
 
@@ -176,7 +181,7 @@ def run_graph(df: pd.DataFrame, cfg: dict, device: str) -> tuple[list[dict], tor
 
 
 def summarize(fold_results: list[dict], label: str) -> dict:
-    metrics = [k for k in fold_results[0].keys() if k not in ("fold", "accuracy_ci")]
+    metrics = [k for k in fold_results[0] if k not in ("fold", "accuracy_ci")]
     summary = {"label": label}
     for m in metrics:
         values = [r[m] for r in fold_results]

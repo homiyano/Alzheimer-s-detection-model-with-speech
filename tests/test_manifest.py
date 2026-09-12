@@ -1,7 +1,12 @@
 import pandas as pd
 import pytest
 
-from alzspeech.data.manifest import ManifestError, load_manifest, save_manifest, validate_manifest
+from alzspeech.data.manifest import (
+    ManifestError,
+    load_manifest,
+    save_manifest,
+    validate_manifest,
+)
 
 
 def _valid_df(tmp_path):

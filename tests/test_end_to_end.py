@@ -11,7 +11,6 @@ from __future__ import annotations
 import numpy as np
 import pytest
 import soundfile as sf
-import torch
 from torch.utils.data import DataLoader
 
 from alzspeech.cv import speaker_kfold
@@ -20,7 +19,10 @@ from alzspeech.features.pmi_graph import PMILookup, build_graph
 from alzspeech.features.text_features import Word
 from alzspeech.models.gated_fusion import GatedFusionClassifier
 from alzspeech.models.pmi_graph import PMIGraphClassifier
-from alzspeech.models.silence_control import SilenceControlClassifier, compute_silence_features
+from alzspeech.models.silence_control import (
+    SilenceControlClassifier,
+    compute_silence_features,
+)
 from alzspeech.models.text_baseline import TextDisfluencyClassifier
 from alzspeech.training.datasets import (
     FusionDataset,
@@ -32,7 +34,12 @@ from alzspeech.training.datasets import (
     collate_silence,
     collate_text,
 )
-from alzspeech.training.forward_fns import fusion_forward, graph_forward, silence_forward, text_forward
+from alzspeech.training.forward_fns import (
+    fusion_forward,
+    graph_forward,
+    silence_forward,
+    text_forward,
+)
 from alzspeech.training.loop import train_and_evaluate
 
 

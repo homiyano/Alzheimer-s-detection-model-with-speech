@@ -16,7 +16,7 @@ def classification_metrics(y_true, y_pred) -> dict:
     y_true = np.asarray(y_true)
     y_pred = np.asarray(y_pred)
     accuracy = float((y_true == y_pred).mean())
-    tn, fp, fn, tp = confusion_matrix(y_true, y_pred, labels=[0, 1]).ravel()
+    tn, fp, _fn, _tp = confusion_matrix(y_true, y_pred, labels=[0, 1]).ravel()
     specificity = float(tn / (tn + fp)) if (tn + fp) > 0 else 0.0
     return {
         "accuracy": accuracy,

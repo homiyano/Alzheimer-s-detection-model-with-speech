@@ -1,4 +1,3 @@
-from pathlib import Path
 
 from alzspeech.data.manifest import validate_manifest
 from alzspeech.data.synthetic import generate_synthetic_dataset

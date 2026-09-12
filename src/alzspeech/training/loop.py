@@ -57,7 +57,7 @@ def evaluate_epoch(model: nn.Module, loader: DataLoader, forward_fn: ForwardFn, 
     y_true = torch.cat(all_labels).numpy() if all_labels else torch.empty(0).numpy()
 
     metrics = classification_metrics(y_true, y_pred) if len(y_true) else {}
-    point, lower, upper = bootstrap_ci(y_true, y_pred)
+    _point, lower, upper = bootstrap_ci(y_true, y_pred)
     metrics["accuracy_ci"] = (lower, upper)
     return metrics
 

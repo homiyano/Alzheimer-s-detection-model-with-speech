@@ -1,5 +1,4 @@
 import numpy as np
-import pytest
 
 from alzspeech.cv import leave_one_speaker_out, speaker_kfold
 
