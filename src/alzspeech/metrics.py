@@ -45,10 +45,11 @@ def bootstrap_ci(
     y_true = np.asarray(y_true)
     y_pred = np.asarray(y_pred)
     n = len(y_true)
+    if n == 0:
+        return 0.0, 0.0, 0.0
+
     rng = np.random.default_rng(seed)
     point = metric_fn(y_true, y_pred)
-    if n == 0:
-        return point, point, point
 
     samples = np.empty(n_bootstrap)
     for i in range(n_bootstrap):
