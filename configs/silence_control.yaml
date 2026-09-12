@@ -1,0 +1,10 @@
+# Mandatory Clever Hans sanity-check baseline (docs/research/sota_papers.md,
+# pitfall #3). Trains on silence/pause summary stats only — no lexical or
+# acoustic content. Any other model's reported accuracy should be compared
+# against this control's accuracy.
+model_type: silence
+batch_size: 8
+epochs: 30
+lr: 1.0e-2
+n_splits: 5
+seed: 42

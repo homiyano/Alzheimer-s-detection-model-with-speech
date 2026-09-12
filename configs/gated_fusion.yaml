@@ -1,0 +1,14 @@
+# Pick 1 (docs/ARCHITECTURE.md): frozen Whisper acoustic embeddings + fine-tuned
+# text, combined via a learned gate. Template: "Listening Between the Lines"
+# (arXiv:2606.30675), F1 90.14% on ADReSSo.
+model_type: fusion
+text_model_name: bert-base-uncased
+audio_features_dir: audio_features  # relative to --features-dir, produced by scripts/extract_features.py
+text_column: transcript_paused
+fusion_dim: 256
+max_length: 128
+batch_size: 8
+epochs: 15
+lr: 2.0e-5
+n_splits: 5
+seed: 42

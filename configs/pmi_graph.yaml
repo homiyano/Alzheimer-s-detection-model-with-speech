@@ -1,0 +1,17 @@
+# Pick 3 (docs/ARCHITECTURE.md): text baseline augmented with a PMI
+# co-occurrence graph (highest-ablation-value component of Xiao et al. 2026,
+# arXiv:2606.31186, 90.00% accuracy / 89.86% F1 on ADReSSo). Intended as a
+# second iteration once the text baseline and fusion model are validated.
+model_type: graph
+text_model_name: bert-base-uncased
+text_column: transcript
+node_embed_dim: 64
+graph_hidden_dim: 64
+pmi_window: 3
+pmi_threshold: 0.3
+max_length: 128
+batch_size: 8
+epochs: 15
+lr: 2.0e-5
+n_splits: 5
+seed: 42

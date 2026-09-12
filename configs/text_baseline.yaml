@@ -1,0 +1,11 @@
+# Pick 2 (docs/ARCHITECTURE.md): text-only fine-tuned BERT + pause tokens.
+# Template: Yuan et al. 2021 (arXiv:2106.08689), 89.6% accuracy on ADReSS.
+model_type: text
+model_name: bert-base-uncased
+text_column: transcript_paused
+max_length: 128
+batch_size: 8
+epochs: 15
+lr: 2.0e-5
+n_splits: 5
+seed: 42
