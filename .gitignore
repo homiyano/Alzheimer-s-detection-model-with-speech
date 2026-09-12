@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.Python
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment / secrets
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Data (never commit protected clinical data — DUA-restricted)
+data/raw/
+data/interim/
+data/external/
+*.wav
+*.mp3
+*.flac
+
+# Model artifacts
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.bin
+outputs/
+wandb/
+mlruns/
+logs/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Cache
+.cache/
+.mypy_cache/
+.ruff_cache/
